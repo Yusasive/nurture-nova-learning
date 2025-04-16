@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -27,13 +29,45 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function WhyChooseUs() {
   return (
-    <section className="px-6 md:px-28 py-20 md:space-x-10 bg-white">
+    <motion.section
+      className="px-6 md:px-28 py-20 bg-white"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-3xl text-[#000000] font-bold">
-            This is Why We are <span className="text-[#FC8402]">different</span>{" "}
+            This is Why We are <span className="text-[#FF3366]">different</span>{" "}
             from Others
           </h2>
           <p className="text-[#9CA3AF] text-sm mt-4">
@@ -58,12 +92,17 @@ export default function WhyChooseUs() {
               className="rounded-xl shadow-md"
             />
           </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        </motion.div>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          variants={containerVariants}
+        >
           {features.map((feature, i) => (
-            <div
+            <motion.div
               key={i}
-              className="bg-white shadow-md rounded-xl px-6 py-12 flex flex-col items-start hover:shadow-lg transition"
+              className="bg-white shadow-md rounded-xl px-6 py-12 flex flex-col items-start hover:shadow-lg transition hover:scale-[1.02]"
+              variants={cardVariants}
+              whileHover={{ scale: 1.03 }}
             >
               <Image
                 src={feature.icon}
@@ -72,12 +111,16 @@ export default function WhyChooseUs() {
                 height={40}
                 className="mb-4"
               />
-              <h3 className="text-lg text-[#000000] font-bold">{feature.title}</h3>
-              <p className="text-[#9CA3AF] text-xs mt-2">{feature.description}</p>
-            </div>
+              <h3 className="text-lg text-[#000000] font-bold">
+                {feature.title}
+              </h3>
+              <p className="text-[#9CA3AF] text-xs mt-2">
+                {feature.description}
+              </p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

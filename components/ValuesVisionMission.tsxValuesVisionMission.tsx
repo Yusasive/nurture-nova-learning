@@ -1,9 +1,9 @@
 export default function ValuesVisionMission() {
   return (
-    <section className="bg-[#033642] text-white px-4 py-16 md:px-12">
+    <section className="bg-[#012958] text-white px-4 py-16 md:px-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#FF3366] mb-4">
             Our Values
           </h2>
           <p className="text-gray-100 mb-6 leading-relaxed">
@@ -35,7 +35,7 @@ export default function ValuesVisionMission() {
 
         <div className="space-y-6">
           <div className="bg-white text-black p-6 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold text-orange-500 mb-2">
+            <h3 className="text-xl font-bold text-[#FF3366] mb-2">
               Our Vision
             </h3>
             <p className="text-gray-700">
@@ -46,7 +46,7 @@ export default function ValuesVisionMission() {
           </div>
 
           <div className="bg-white text-black p-6 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold text-orange-500 mb-2">
+            <h3 className="text-xl font-bold text-[#FF3366] mb-2">
               Our Mission
             </h3>
             <p className="text-gray-700">

@@ -1,0 +1,76 @@
+"use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+
+
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 120 }}
+      className=" fixed top-6 w-full  z-50"
+    >
+      <div className="mx-6 lg:mx-28 rounded-2xl  px-8 md:py-4 bg-[#FFFFFF] backdrop-blur-lg pb-4 pt-1 flex border-b border-[#CDCDCD33] justify-between items-center">
+        <motion.div
+          whileHover={{ rotate: 10 }}
+          className="w-12 h-12 rounded-full flex items-center justify-center"
+        >
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="Profile"
+              className="rounded-full object-cover"
+              width={66}
+              height={66}
+            />
+          </Link>
+        </motion.div>
+
+        <div className="hidden md:flex items-center space-x-16 text-[#000000] text-xl font-semibold">
+          {["About", "FAQs", "Contact"].map((item) => (
+            <motion.div key={item} className="hover:text-gray-300">
+              <Link href={`/${item.toLowerCase()}`}>{item}</Link>
+            </motion.div>
+          ))}
+        </div>
+        <motion.button
+          onClick={() => setIsOpen(!isOpen)}
+          whileTap={{ scale: 0.9 }}
+          className="md:hidden text-white"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </motion.button>
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-full left-0 w-full bg-black bg-opacity-80 py-6 flex flex-col items-center space-y-4 text-[#CDCDCD] text-xl font-mori font-semibold"
+          >
+            {["About", "FAQs", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                onClick={() => setIsOpen(false)}
+                className="hover:text-gray-300"
+              >
+                {item}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  );
+}

@@ -41,34 +41,36 @@ export default function Navbar() {
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
           whileTap={{ scale: 0.9 }}
-          className="md:hidden text-white"
+          className="md:hidden text-[#111111]"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </motion.button>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -20, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 w-full bg-black bg-opacity-80 py-6 flex flex-col items-center space-y-4 text-[#CDCDCD] text-xl font-mori font-semibold"
-          >
-            {["About", "FAQs", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                onClick={() => setIsOpen(false)}
-                className="hover:text-gray-300"
-              >
-                {item}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className="mx-6 w-full bg-white/30">
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-full min-w-5/6 rounded-lg bg-black/20 bg-opacity-80 py-6 flex flex-col items-center space-y-4 text-[#111111] text-xl font-montserrat font-semibold"
+            >
+              {["About", "FAQs", "Contact"].map((item) => (
+                <Link
+                  key={item}
+                  href={`/${item.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-gray-300"
+                >
+                  {item}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.nav>
   );
 }

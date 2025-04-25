@@ -3,7 +3,7 @@ export default function ValuesVisionMission() {
     <section className="bg-[#477EFA] pt-40 text-white px-4 py-16 md:px-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-[#111111] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-[#FE2296] mb-4">
             Our Values
           </h2>
           <p className="text-white text-xl font-mont font-medium mb-6 leading-relaxed">

@@ -48,14 +48,17 @@ export default function StatsSection() {
     <motion.div
       className="bg-[#FFFFFF] flex justify-center flex-wrap px-6 lg:px-28 items-center gap-10 md:gap-20 py-10"
       variants={containerVariants}
-      initial="hidden"
-      whileInView="show"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.4 }}
     >
       {statsData.map((item, index) => (
         <motion.div
           key={index}
           variants={cardVariants}
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
           className="flex items-center gap-4"
         >
           <motion.div
@@ -65,10 +68,10 @@ export default function StatsSection() {
             {item.icon}
           </motion.div>
           <div>
-            <div className="font-bold text-[#000000] text-base">
+            <div className="font-bold font-montserrat text-[#111111] text-base">
               <CountUp end={item.number} duration={2} suffix={item.suffix} />
             </div>
-            <div className="text-[#FF3366] text-sm font-medium">
+            <div className="text-[#FE2296] text-sm font-montserrat font-semibold">
               {item.label}
             </div>
           </div>

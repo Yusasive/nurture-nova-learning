@@ -29,7 +29,7 @@ const FaqSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-bold text-center text-[#FF3366] mb-12"
+        className="text-3xl md:text-4xl font-bold text-center text-[#FE2296] mb-12"
       >
         Frequently Asked Questions
       </motion.h2>
@@ -67,7 +67,7 @@ const FaqSection = () => {
                 <p className="text-base font-medium text-gray-800">
                   {question}
                 </p>
-                <span className="text-[#FF3366] text-2xl font-bold">
+                <span className="text-[#FE2296] text-2xl font-bold">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </div>
@@ -80,7 +80,7 @@ const FaqSection = () => {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="text-sm text-gray-700 mt-2"
+                    className="text-sm text-[#477EFA] font-montserrat mt-2"
                   >
                     {/* Replace with actual answer */}
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

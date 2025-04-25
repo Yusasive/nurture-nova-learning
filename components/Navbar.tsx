@@ -22,7 +22,7 @@ export default function Navbar() {
         >
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/nurture-nova.png"
               alt="Profile"
               className="rounded-full object-cover w-full"
               width={100}
@@ -31,7 +31,7 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        <div className="hidden md:flex items-center space-x-16 text-[#000000] text-xl font-semibold">
+        <div className="hidden md:flex items-center space-x-16 text-[#111111] text-xl font-semibold">
           {["About", "FAQs", "Contact"].map((item) => (
             <motion.div key={item} className="hover:text-gray-300">
               <Link href={`/${item.toLowerCase()}`}>{item}</Link>

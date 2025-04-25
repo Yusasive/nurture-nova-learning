@@ -1,18 +1,65 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { MdMenuBook } from "react-icons/md";
+import { TbMathSymbols } from "react-icons/tb";
+import { GiPuzzle } from "react-icons/gi";
+import { FaPython } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
+import { MdOutlineTune } from "react-icons/md";
+import React from "react";
 
-const courses = [
-  { name: "Mathematics", icon: "/icons/math.png" },
-  { name: "English", icon: "/icons/english.png" },
-  { name: "Physics", icon: "/icons/physics.png" },
-  { name: "Chemistry", icon: "/icons/chemistry.png" },
-  { name: "Biology", icon: "/icons/biology.png" },
-  { name: "Coding", icon: "/icons/coding.png" },
-  { name: "Music", icon: "/icons/music.png" },
-  { name: "Languages", icon: "/icons/languages.png" },
-  { name: "11+ NVR/VR", icon: "/icons/nvrvr.png" },
+interface ServiceItem {
+  id: number;
+  title: string;
+  link: string;
+  icon: React.ReactElement;
+  delay: number;
+}
+
+const ServicesData: ServiceItem[] = [
+  {
+    id: 1,
+    title: "Maths, English, Science (Physics, Chemistry, Biology)",
+    link: "#",
+    icon: <TbMathSymbols />,
+    delay: 0.2,
+  },
+  {
+    id: 2,
+    title: "11+ NVR/VR",
+    link: "#",
+    icon: <GiPuzzle />,
+    delay: 0.3,
+  },
+  {
+    id: 3,
+    title: "GCSE Preparation",
+    link: "#",
+    icon: <MdMenuBook />,
+    delay: 0.4,
+  },
+  {
+    id: 4,
+    title: "Coding (Scratch, Python, Web Dev)",
+    link: "#",
+    icon: <FaPython />,
+    delay: 0.5,
+  },
+  {
+    id: 5,
+    title: "Artificial Intelligence & Machine Learning",
+    link: "#",
+    icon: <GiBrain />,
+    delay: 0.6,
+  },
+  {
+    id: 6,
+    title: "Product Design & Digital Skills",
+    link: "#",
+    icon: <MdOutlineTune />,
+    delay: 0.7,
+  },
 ];
 
 const containerVariants = {
@@ -35,36 +82,34 @@ const itemVariants = {
 
 export default function CoursesSection() {
   return (
-    <section className="bg-[#012958] text-white py-10 px-6 md:px-28">
+    <section className="bg-[#477EFA] text-white py-10 px-6 md:px-28">
       <div className="text-center mb-8">
-        <h3 className="text-[#FF3366] text-xl font-bold">Our Courses</h3>
-        <p className="text-base md:text-lg text-[#FFFFFF] font-semibold mt-2">
+        <h3 className="text-[#111111] text-3xl font-montserrat font-semibold">
+          Our Courses
+        </h3>
+        <p className="text-base md:text-lg text-[#FFFFFF] font-urbanist font-semibold mt-2">
           Our Tutors Provide Quality Teaching In The Following Subjects:
         </p>
       </div>
 
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        {courses.map((course, index) => (
+        {ServicesData.map((service) => (
           <motion.div
-            key={index}
+            key={service.id}
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
-            className="bg-white text-black rounded-xl py-2 px-6 flex flex-row items-center gap-6 shadow-md cursor-pointer transition-all duration-300"
+            className="bg-[#f4f4f4] rounded-2xl flex flex-col gap-4 items-center justify-center p-2 py-5 hover:bg-white hover:scale-110 duration-300 hover:shadow-2xl"
           >
-            <Image
-              src={course.icon}
-              alt={course.name}
-              width={30}
-              height={30}
-              className=""
-            />
-            <h4 className="font-bold text-lg">{course.name}</h4>
+            <div className="text-4xl text-[#477EFA] mb-4">{service.icon}</div>
+            <h1 className="text-base font-semibold font-montserrat text-center px-3 text-[#012958]">
+              {service.title}
+            </h1>
           </motion.div>
         ))}
       </motion.div>

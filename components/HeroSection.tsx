@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { MdCalendarToday } from "react-icons/md";
 
 const containerVariants = {
   hidden: {},
@@ -32,16 +33,23 @@ export default function HeroSection() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-2xl font-bold md:text-[40px]"
+            className="text-2xl font-montserrat font-bold md:text-[40px]"
           >
-            Quality tutoring through 1-on-1 Online Classes
+            Personalised Online Tutoring for Tech & Academics for Ages 6 to 18.
           </motion.h1>
 
-          <motion.p variants={itemVariants} className="text-base md:text-xl">
-            Get one of our skilled and highly qualified tutors.
+          <motion.p
+            variants={itemVariants}
+            className="font-urbanist text-base md:text-xl"
+          >
+            Helping students thrive in Maths, English, Science, Coding, AI &
+            more wherever they are.
           </motion.p>
 
-          <motion.div variants={itemVariants}>
+          <motion.div
+            variants={itemVariants}
+            className="flex justify-center mt-4"
+          >
             <Link href="/register">
               <motion.button
                 whileHover={{
@@ -50,9 +58,10 @@ export default function HeroSection() {
                   color: "#FF3366",
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="bg-[#FF3366] text-[#FFFFFF] hover:bg-white hover:text-[#FF3366] border border-[#FF3366] text-base font-bold px-5 py-2 rounded-full transition duration-300"
+                className="flex items-center gap-2 bg-[#FE2296] text-[#FFFFFF] hover:bg-white hover:text-[#FE2296] border border-[#FE2296] text-base font-bold px-5 py-2 rounded-full transition duration-300"
               >
-                Sign Up
+                <MdCalendarToday className="text-lg font-urbanist" />
+                Book a Section
               </motion.button>
             </Link>
           </motion.div>

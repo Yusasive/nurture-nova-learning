@@ -59,7 +59,7 @@ export default function ContactPage() {
             <input
               type="email"
               id="email"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-[#111111] text-base rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-[#477EFA] dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-[#111111] text-base rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-50 dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
               placeholder="nurturenovalearning@gmail.com"
               required
             />
@@ -80,7 +80,7 @@ export default function ContactPage() {
             <input
               type="text"
               id="subject"
-              className="block p-3 w-full text-base text-[#111111] bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-[#477EFA] dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
+              className="block p-3 w-full text-base text-[#111111] bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-50 dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
               placeholder="Let us know how we can help you"
               required
             />
@@ -102,7 +102,7 @@ export default function ContactPage() {
             <textarea
               id="message"
               rows={6}
-              className="block p-2.5 w-full text-base text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-[#477EFA] dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
+              className="block p-2.5 w-full text-base text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-50 dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
               placeholder="Leave a comment..."
             ></textarea>
           </motion.div>

@@ -1,12 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MdMenuBook } from "react-icons/md";
 import { TbMathSymbols } from "react-icons/tb";
-import { GiPuzzle } from "react-icons/gi";
-import { FaPython } from "react-icons/fa";
-import { GiBrain } from "react-icons/gi";
-import { MdOutlineTune } from "react-icons/md";
+import {
+  GiPuzzle,
+  GiChemicalDrop,
+  GiArtificialIntelligence,
+} from "react-icons/gi";
+import {
+  MdOutlineScience,
+  MdOutlineDesignServices,
+} from "react-icons/md";
+import { FaPython, FaBookOpen, FaLaptopCode } from "react-icons/fa";
+import { RiEnglishInput } from "react-icons/ri";
+import { SiScratch } from "react-icons/si";
 import React from "react";
 
 interface ServiceItem {
@@ -20,45 +27,77 @@ interface ServiceItem {
 const ServicesData: ServiceItem[] = [
   {
     id: 1,
-    title: "Maths, English, Science (Physics, Chemistry, Biology)",
+    title: "Mathematics",
     link: "#",
     icon: <TbMathSymbols />,
     delay: 0.2,
   },
   {
     id: 2,
-    title: "11+ NVR/VR",
+    title: "English",
     link: "#",
-    icon: <GiPuzzle />,
+    icon: <RiEnglishInput />,
     delay: 0.3,
   },
   {
     id: 3,
-    title: "GCSE Preparation",
+    title: "Science",
     link: "#",
-    icon: <MdMenuBook />,
+    icon: <MdOutlineScience />,
     delay: 0.4,
   },
   {
     id: 4,
-    title: "Coding (Scratch, Python, Web Dev)",
+    title: "Physics",
     link: "#",
-    icon: <FaPython />,
+    icon: <FaBookOpen />,
     delay: 0.5,
   },
   {
     id: 5,
-    title: "Artificial Intelligence & Machine Learning",
+    title: "Chemistry",
     link: "#",
-    icon: <GiBrain />,
+    icon: <GiChemicalDrop />,
     delay: 0.6,
   },
   {
     id: 6,
-    title: "Product Design & Digital Skills",
+    title: "11+ Preparation",
     link: "#",
-    icon: <MdOutlineTune />,
+    icon: <GiPuzzle />,
     delay: 0.7,
+  },
+  {
+    id: 7,
+    title: "Coding (Python and Scratch)",
+    link: "#",
+    icon: (
+      <div className="flex items-center gap-1">
+        <FaPython /> <SiScratch />
+      </div>
+    ),
+    delay: 0.8,
+  },
+  {
+    id: 8,
+    title: "Web Development",
+    link: "#",
+    icon: <FaLaptopCode />,
+    delay: 0.9,
+  },
+  {
+    id: 9,
+    title: "Artificial Intelligence and Machine Learning",
+    link: "#",
+    icon: <GiArtificialIntelligence />,
+    delay: 1.0,
+  },
+  {
+    id: 10,
+    title: "Product/Graphics Design",
+    link: "#",
+    icon: <MdOutlineDesignServices />,
+    delay: 1.1,
   },
 ];
 
@@ -93,7 +132,7 @@ export default function CoursesSection() {
       </div>
 
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

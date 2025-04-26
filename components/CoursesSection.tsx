@@ -94,7 +94,7 @@ const ServicesData: ServiceItem[] = [
   },
   {
     id: 10,
-    title: "Product/Graphics Design",
+    title: "Product, Graphics Design",
     link: "#",
     icon: <MdOutlineDesignServices />,
     delay: 1.1,

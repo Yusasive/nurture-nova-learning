@@ -1,26 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TbMathSymbols } from "react-icons/tb";
-import {
-  GiPuzzle,
-  GiChemicalDrop,
-  GiArtificialIntelligence,
-} from "react-icons/gi";
-import {
-  MdOutlineScience,
-  MdOutlineDesignServices,
-} from "react-icons/md";
-import { FaPython, FaBookOpen, FaLaptopCode } from "react-icons/fa";
-import { RiEnglishInput } from "react-icons/ri";
-import { SiScratch } from "react-icons/si";
-import React from "react";
+import Image from "next/image";
 
 interface ServiceItem {
   id: number;
   title: string;
   link: string;
-  icon: React.ReactElement;
+  icon: string; // image path
   delay: number;
 }
 
@@ -29,74 +16,70 @@ const ServicesData: ServiceItem[] = [
     id: 1,
     title: "Mathematics",
     link: "#",
-    icon: <TbMathSymbols />,
+    icon: "/icons/mathematics.png",
     delay: 0.2,
   },
   {
     id: 2,
     title: "English",
     link: "#",
-    icon: <RiEnglishInput />,
+    icon: "/icons/english.png",
     delay: 0.3,
   },
   {
     id: 3,
     title: "Science",
     link: "#",
-    icon: <MdOutlineScience />,
+    icon: "/icons/sciences.png",
     delay: 0.4,
   },
   {
     id: 4,
     title: "Physics",
     link: "#",
-    icon: <FaBookOpen />,
+    icon: "/icons/physics.png",
     delay: 0.5,
   },
   {
     id: 5,
     title: "Chemistry",
     link: "#",
-    icon: <GiChemicalDrop />,
+    icon: "/icons/chemistry.png",
     delay: 0.6,
   },
   {
     id: 6,
     title: "11+ Preparation",
     link: "#",
-    icon: <GiPuzzle />,
+    icon: "/icons/preparation.png",
     delay: 0.7,
   },
   {
     id: 7,
     title: "Coding (Python and Scratch)",
     link: "#",
-    icon: (
-      <div className="flex items-center gap-1">
-        <FaPython /> <SiScratch />
-      </div>
-    ),
+    icon: "/icons/coding.png",
     delay: 0.8,
   },
   {
     id: 8,
     title: "Web Development",
     link: "#",
-    icon: <FaLaptopCode />,
+    icon: "/icons/web-development.png",
     delay: 0.9,
   },
   {
     id: 9,
     title: "Artificial Intelligence and Machine Learning",
     link: "#",
-    icon: <GiArtificialIntelligence />,
+    icon: "/icons/ai-robotics.png",
     delay: 1.0,
   },
   {
     id: 10,
     title: "Product, Graphics Design",
     link: "#",
-    icon: <MdOutlineDesignServices />,
+    icon: "/icons/product.png",
     delay: 1.1,
   },
 ];
@@ -143,10 +126,16 @@ export default function CoursesSection() {
             key={service.id}
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
-            className="bg-[#f4f4f4] rounded-2xl flex flex-col gap-4 items-center justify-center p-2 py-5 hover:bg-white hover:scale-110 duration-300 hover:shadow-2xl"
+            className="bg-[#f4f4f4] rounded-xl flex flex-col gap-2 items-center justify-center p-2 py-3 hover:bg-white hover:scale-105 duration-300 hover:shadow-lg w-full mx-auto"
           >
-            <div className="text-4xl text-[#477EFA] mb-4">{service.icon}</div>
-            <h1 className="text-base font-semibold font-montserrat text-center px-3 text-[#012958]">
+            <Image
+              src={service.icon}
+              alt={service.title}
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain"
+            />
+            <h1 className="text-sm font-semibold font-montserrat text-center px-1 text-[#012958]">
               {service.title}
             </h1>
           </motion.div>

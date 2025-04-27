@@ -3,10 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const teamMembers = [
-  { src: "/images/first.avif", alt: "Team Member 1" },
-  { src: "/images/second-image.jpg", alt: "Team Member 2" },
-];
+const teamMembers = [{ src: "/images/medium-shot.jpg", alt: "Team Member 2" }];
 
 const imageVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -33,7 +30,7 @@ export default function AboutSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="w-28 h-60 md:w-36 md:h-72 rounded-[40px] overflow-hidden shadow-md"
+            className="h-60 md:w-80 md:h-88 shadow-2xl rounded-[40px] overflow-hidden"
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
@@ -62,11 +59,16 @@ export default function AboutSection() {
           Empowering Minds, One Lesson at a Time
         </h2>
         <p className="text-[#78808f] text-base font-urbanist mb-6">
-          At NurtureNova Learning, we go beyond traditional tutoring offering
-          personalized, flexible, and tech-integrated education tailored to each
-          student&apos;s unique journey. Whether you&apos;re in the UK, Canada,
-          Nigeria, or beyond, our approach focuses on both academic excellence
-          and future-ready skills.
+          At NurtureNova Learning, we believe education should be as unique as
+          every student. We go beyond traditional tutoring by offering
+          personalised, flexible, and tech-integrated learning experiences
+          tailored to each child’s journey.
+        </p>
+        <p className="text-[#78808f] text-base font-urbanist mb-6">
+          Whether you&apos;re based in the UK, Canada, Nigeria, or beyond, our
+          approach combines strong academic support with future-ready skills —
+          empowering students to thrive in both school and the ever-evolving
+          digital world.
         </p>
         <Link href="/about">
           <motion.button

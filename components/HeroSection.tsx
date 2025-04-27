@@ -16,7 +16,7 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
-}; 
+};
 
 export default function HeroSection() {
   return (
@@ -50,7 +50,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="flex justify-center mt-4"
           >
-            <Link href="/register">
+            <Link href="https://wa.me/2347079650962" target="_blank">
               <motion.button
                 whileHover={{
                   scale: 1.05,

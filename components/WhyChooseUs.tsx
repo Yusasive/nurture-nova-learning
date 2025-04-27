@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import BannerPng from "@/public/images/choose.png";
+import BannerPng from "@/public/images/young-girl.jpg";
 import { motion } from "framer-motion";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
@@ -9,7 +9,7 @@ const reasons = [
   {
     title: "1-on-1 Personalised Learning",
     description:
-      "Every student is unique. Thats why our sessions are fully personalised one tutor, one student — tailored to your childs pace, strengths, and goals",
+      "Every student is unique. Thats why our sessions are fully personalised one tutor, one student  tailored to your childs pace, strengths, and goals",
     delay: 0.2,
   },
   {
@@ -21,7 +21,7 @@ const reasons = [
   {
     title: "Academic & Tech Excellence",
     description:
-      "From core subjects like Maths, English, and Science to in-demand tech skills like Coding, Web Development, and AI we help your child thrive in both academics and innovation.",
+      "From core subjects like Maths, English, and Science to in-demand tech skills like Coding, Web Development, and AI — we help your child thrive in both academics and innovation.",
     delay: 0.4,
   },
   {
@@ -74,7 +74,7 @@ const WhyChooseUs: React.FC = () => {
             <Image
               src={BannerPng}
               alt="Learning Platform"
-              className="w-[400px] md:max-w-[450px] object-cover drop-shadow"
+              className="w-[400px] md:max-w-[450px] h-[300px] md:h-[550px] rounded-xl shadow-2xl object-cover drop-shadow"
               width={400}
               height={550}
             />

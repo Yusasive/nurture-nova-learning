@@ -36,7 +36,7 @@ export default function Footer() {
           }}
         >
           <Image
-            src="/images/second-logo.png"
+            src="/images/all-white.png"
             alt="Logo"
             width={150}
             height={100}
@@ -71,7 +71,9 @@ export default function Footer() {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-                <Link href={`/${link.toLowerCase()}`}>{link}</Link>
+                <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}>
+                  {link}
+                </Link>
               </motion.li>
             ))}
           </ul>

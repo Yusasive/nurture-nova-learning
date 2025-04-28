@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const teamMembers = [{ src: "/images/medium-shot.jpg", alt: "Team Member 2" }];
+const teamMembers = [{ src: "/images/about-us.png", alt: "Team Member 2" }];
 
 const imageVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -40,6 +40,7 @@ export default function AboutSection() {
               width={300}
               height={400}
               className="object-cover w-full h-full"
+              loading="lazy"
             />
           </motion.div>
         ))}

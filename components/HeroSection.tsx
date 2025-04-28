@@ -35,15 +35,15 @@ export default function HeroSection() {
             variants={itemVariants}
             className="text-2xl font-montserrat font-bold md:text-[40px]"
           >
-            Personalised Online Tutoring for Tech & Academics for Ages 6 to 18.
+            Personalised Online Tutoring in Tech and Academics for Ages 6–18
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="font-urbanist text-base md:text-xl"
           >
-            Helping students thrive in Maths, English, Science, Coding, AI &
-            more wherever they are.
+            Helping students excel in Maths, English, Science, Coding, AI, and
+            more — wherever they are.
           </motion.p>
 
           <motion.div
@@ -61,7 +61,7 @@ export default function HeroSection() {
                 className="flex items-center gap-2 bg-[#FE2296] text-[#FFFFFF] hover:bg-white hover:text-[#FE2296] border border-[#FE2296] text-base font-bold px-5 py-2 rounded-full transition duration-300"
               >
                 <MdCalendarToday className="text-lg font-urbanist" />
-                Book a Section
+                Book a Session
               </motion.button>
             </Link>
           </motion.div>

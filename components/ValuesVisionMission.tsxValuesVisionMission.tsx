@@ -3,13 +3,12 @@ export default function ValuesVisionMission() {
     <section className="bg-[#477EFA] pt-32 text-white px-4 py-16 md:px-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-[#FE2296] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-[#FFFFFF] mb-4">
             Our Values
           </h2>
           <p className="text-white text-xl font-mont font-medium mb-6 leading-relaxed">
-            Guided by our core values, we strive to build a nurturing and
-            impactful educational experience. Our commitment to respect,
-            communication, and growth shapes everything we do.
+            At NurtureNova Learning, our core values shape everything we do.
+            They guide how we teach, how we support, and how we grow together.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -39,9 +38,10 @@ export default function ValuesVisionMission() {
               Our Vision
             </h3>
             <p className="text-gray-700 text-base font-medium font-montserrat">
-              Our vision is to be the leading online tutoring company, renowned
-              for our commitment to staff growth and welfare, personalized
-              education, and student success across global communities.
+              Our vision is to become the leading online tutoring company,
+              recognised for our dedication to staff growth and welfare,
+              personalised education, and empowering students to achieve success
+              across global communities.
             </p>
           </div>
 
@@ -50,11 +50,11 @@ export default function ValuesVisionMission() {
               Our Mission
             </h3>
             <p className="text-gray-700 text-base font-medium font-montserrat">
-              Our mission is to provide students with a strong foundation and
-              the tools to enjoy learning, to lead impactful programs that
-              foster both academic success and character development, and to
-              embrace individualized learning approaches that enhance
-              efficiency.
+              Our mission is to equip students with a strong academic foundation
+              and a genuine love for learning. We aim to deliver impactful
+              programmes that foster both academic excellence and character
+              development, while embracing personalised learning approaches that
+              enhance each student&apos;s growth and success.
             </p>
           </div>
         </div>

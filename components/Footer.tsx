@@ -1,14 +1,23 @@
 "use client";
 
-import { Mail, Phone, Linkedin, Instagram, X } from "lucide-react";
+import { Mail, Phone, Linkedin, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const socialIcons = [
-  { icon: <X className="w-6 h-6" />, href: "#" },
-  { icon: <Linkedin className="w-6 h-6" />, href: "#" },
-  { icon: <Instagram className="w-6 h-6" />, href: "#" },
+  {
+    icon: <Facebook className="w-6 h-6" />,
+    href: "https://www.facebook.com/profile.php?id=61574621054181",
+  },
+  {
+    icon: <Linkedin className="w-6 h-6" />,
+    href: "https://www.linkedin.com/company/nurturenova-learning/",
+  },
+  {
+    icon: <Instagram className="w-6 h-6" />,
+    href: "https://www.instagram.com/nurturenova_learning?igsh=YzljYTk1ODg3Zg==",
+  },
 ];
 
 export default function Footer() {
@@ -106,7 +115,7 @@ export default function Footer() {
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
       >
-        © 2025 Copyright | Nurture Nova Learning. All rights reserved
+        © 2025 Copyright | NurtureNova Learning. All rights reserved
       </motion.div>
     </footer>
   );

@@ -1,7 +1,40 @@
 "use client";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus("idle");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, subject, message }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      setStatus("success");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <motion.section
       className="bg-white pt-28"
@@ -31,7 +64,7 @@ export default function ContactPage() {
         </motion.p>
 
         <motion.form
-          action="#"
+          onSubmit={handleSubmit}
           className="space-y-8"
           initial="hidden"
           animate="visible"
@@ -59,7 +92,9 @@ export default function ContactPage() {
             <input
               type="email"
               id="email"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-[#111111] text-base rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-50 dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="shadow-sm bg-gray-50 border border-gray-300 text-[#111111] text-base rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
               placeholder="nurturenovalearning@gmail.com"
               required
             />
@@ -80,12 +115,16 @@ export default function ContactPage() {
             <input
               type="text"
               id="subject"
-              className="block p-3 w-full text-base text-[#111111] bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-50 dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="block p-3 w-full text-base text-[#111111] bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
               placeholder="Let us know how we can help you"
               required
             />
           </motion.div>
-
+          <div>
+            <input type="text" name="honeypot" style={{ display: "none" }} />
+          </div>
           <motion.div
             className="sm:col-span-2"
             variants={{
@@ -102,8 +141,11 @@ export default function ContactPage() {
             <textarea
               id="message"
               rows={6}
-              className="block p-2.5 w-full text-base text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-50 dark:border-[#477EFA] dark:placeholder-gray-400 dark:text-white"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="block p-2.5 w-full text-base text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Leave a comment..."
+              required
             ></textarea>
           </motion.div>
 
@@ -115,10 +157,19 @@ export default function ContactPage() {
           >
             <button
               type="submit"
+              disabled={isSubmitting}
               className="py-3 px-5 text-lg font-montserrat font-medium text-center text-white rounded-lg bg-[#FE2296] hover:bg-[#e6295b] transition focus:ring-4 focus:outline-none focus:ring-primary-300"
             >
-              Send message
+              {isSubmitting ? "Sending..." : "Send message"}
             </button>
+            {status === "success" && (
+              <p className="mt-4 text-green-600">Message sent successfully!</p>
+            )}
+            {status === "error" && (
+              <p className="mt-4 text-red-600">
+                Something went wrong. Try again.
+              </p>
+            )}
           </motion.div>
         </motion.form>
       </div>

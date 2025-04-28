@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import operateImage from "@/public/images/operatepic-CwSv2PmN.png";
+import operateImage from "@/public/images/side-view.jpg";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -48,23 +48,38 @@ const HowWeOperate = () => {
           className="text-gray-800 text-base font-medium font-mont mb-4"
           variants={textVariants}
         >
-          Our trained tutors are based in Africa and our Students are based in
-          different countries, hence our services are provided remotely.
+          At NurtureNova Learning, we proudly operate as a fully online tutoring
+          company, connecting tutors based in Nigeria with students across the
+          globe.
         </motion.p>
         <motion.p
           className="text-gray-800 text-base font-medium font-mont mb-4"
           variants={textVariants}
         >
-          We use online teaching and learning. The minimum requirements for
-          students to be admitted is to have access to a computer, webcam, good
-          internet, and the desire to achieve in a non-traditional classroom...
+          Our services are delivered remotely, making education accessible,
+          flexible, and personalised for every student, regardless of location.
+        </motion.p>
+        <motion.p
+          className="text-gray-800 text-base font-medium font-mont mb-4"
+          variants={textVariants}
+        >
+          We use trusted online platforms such as Zoom for live lessons and
+          Google Classroom for assignments and progress tracking.
+        </motion.p>
+        <motion.p
+          className="text-gray-800 text-base font-medium font-mont mb-4"
+          variants={textVariants}
+        >
+          For many of today&apos;s students, the ability to access classes
+          anytime, anywhere, is a major advantage — offering convenience,
+          flexibility, and a modern approach to education.
         </motion.p>
         <motion.p
           className="text-gray-800 text-base font-medium font-mont"
           variants={textVariants}
         >
-          For many of today&apos;s students, the opportunity to access a course
-          from any computer with internet connectivity, 24/7, is a huge plus.
+          At NurtureNova Learning, we make learning fit into your world, not the
+          other way around.
         </motion.p>
       </motion.div>
 
@@ -75,7 +90,8 @@ const HowWeOperate = () => {
         <Image
           src={operateImage}
           alt="Online teaching illustration"
-          className="w-full max-w-md"
+          className="w-full max-w-md rounded-md"
+          loading="lazy"
         />
       </motion.div>
     </motion.section>

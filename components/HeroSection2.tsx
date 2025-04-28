@@ -1,5 +1,5 @@
 import React from "react";
-import BgImage from "@/public/images/online-tutor.png";
+import BgImage from "@/public/images/our-tutors.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -9,7 +9,7 @@ const imageVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.2, 
+      delay: 0.2,
       type: "spring",
       stiffness: 100,
     },
@@ -29,9 +29,8 @@ const HeroSection2: React.FC = () => {
         <Image
           src={BgImage}
           alt="Online Tutors"
-          width={300}
-          height={400}
           className="object-cover rounded-[30px] w-full h-full p-4"
+          loading="lazy"
         />
       </motion.div>
     </section>

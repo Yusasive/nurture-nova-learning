@@ -14,13 +14,12 @@ export default function ValuesVisionMission() {
           <div className="flex flex-wrap gap-3">
             {[
               "Servant Leadership",
-              "Communication",
-              "Celebration",
-              "Welfare and Support",
-              "Respect",
-              "Relationship",
+              "Clear and Open Communication",
+              "Respect and Relationship",
               "Integrity",
               "Growth and Development",
+              "Celebration",
+              "Welfare and Support",
             ].map((value, i) => (
               <div
                 key={i}

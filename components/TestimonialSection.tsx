@@ -4,18 +4,13 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: `I got feedback from Pauls Science teacher. He got a reward as well...`,
-    name: "Mrs Soares",
+    text: `Mr Rasheed Adeoti, I wanted you to know Ayomide was awarded star of the week in Mathematics for his hardwork. So well done to you too.`,
+    name: "Mrs Eniola",
     role: "Parent",
   },
   {
-    text: `I have stumbled on several Online/Virtual platforms...`,
-    name: "Mrs Ottun",
-    role: "Parent",
-  },
-  {
-    text: `I wanted to let you know that Omolade was moved from set 5...`,
-    name: "Miss Tade",
+    text: `Thanks so much to NurtureNova, Omotara said she learnt so much and I can also confirmed that through the recorded zoom videos. Kudos to your team.`,
+    name: "Mrs Maribeth",
     role: "Parent",
   },
 ];
@@ -57,9 +52,9 @@ export default function TestimonialSection() {
         <h2 className="text-4xl text-[#FFFFFF] font-montserrat font-bold mb-4">
           What Our Clients Are Saying
         </h2>
-       
+
         <motion.div
-          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -91,11 +86,11 @@ function TestimonialCard({
   role: string;
 }) {
   return (
-    <div className="bg-white text-[#9CA3AF] font-urbanist rounded-xl p-6 shadow-md flex flex-col justify-between items-center h-full">
-      <p className="mb-4">{text}</p>
+    <div className="bg-white text-[#5f6f88] font-urbanist rounded-xl p-6 shadow-md flex flex-col justify-between items-center h-full">
+      <p className="mb-4 text-base">{text}</p>
       <div className="w-full text-left">
         <p className="text-[#FE2296] font-montserrat font-bold">{name}</p>
-        <p className="text-[#9CA3AF] font-urbanist">{role}</p>
+        <p className="text-[#5f6f88] font-urbanist">{role}</p>
       </div>
     </div>
   );

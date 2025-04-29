@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const teamMembers = [{ src: "/images/about-us.png", alt: "Team Member 2" }];
+const teamMembers = [{ src: "/images/about-us.avif", alt: "Team Member 2" }];
 
 const imageVariants = {
   hidden: { opacity: 0, x: -50 },

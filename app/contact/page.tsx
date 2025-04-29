@@ -15,7 +15,7 @@ export default function ContactPage() {
     setStatus("idle");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://nurture-nova.netlify.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, subject, message }),

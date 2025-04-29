@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import operateImage from "@/public/images/side-view.jpg";
+import operateImage from "@/public/images/side-view.avif";
 import { motion } from "framer-motion";
 
 const containerVariants = {

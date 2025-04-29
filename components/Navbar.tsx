@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
 
   return (
     <motion.nav
@@ -32,11 +35,23 @@ export default function Navbar() {
         </motion.div>
 
         <div className="hidden md:flex items-center space-x-16 text-[#111111] text-xl font-semibold">
-          {["About", "FAQs", "Contact"].map((item) => (
-            <motion.div key={item} className="hover:text-gray-300">
-              <Link href={`/${item.toLowerCase()}`}>{item}</Link>
-            </motion.div>
-          ))}
+          {["Home", "About", "FAQs", "Contact"].map((item) => {
+            const href = item === "Home" ? "/" : `/${item.toLowerCase()}`;
+            const isActive = pathname === href;
+
+            return (
+              <motion.div key={item}>
+                <Link
+                  href={href}
+                  className={`hover:text-gray-300 ${
+                    isActive ? "text-[#477EFA] underline" : "text-[#111111]"
+                  }`}
+                >
+                  {item}
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
@@ -57,16 +72,23 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="absolute top-full min-w-5/6 rounded-lg bg-black/20 bg-opacity-80 py-6 flex flex-col items-center space-y-4 text-[#111111] text-xl font-montserrat font-bold"
             >
-              {["About", "FAQs", "Contact"].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-gray-300"
-                >
-                  {item}
-                </Link>
-              ))}
+              {["Home", "About", "FAQs", "Contact"].map((item) => {
+                const href = item === "Home" ? "/" : `/${item.toLowerCase()}`;
+                const isActive = pathname === href;
+
+                return (
+                  <Link
+                    key={item}
+                    href={href}
+                    onClick={() => setIsOpen(false)}
+                    className={`hover:text-gray-300 ${
+                      isActive ? "text-[#477EFA] underline" : "text-[#111111]"
+                    }`}
+                  >
+                    {item}
+                  </Link>
+                );
+              })}
             </motion.div>
           )}
         </AnimatePresence>

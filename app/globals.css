@@ -27,7 +27,7 @@ body {
 
 .bg-container {
   position: relative;
-  background-image: url("/images/little-boy.jpg");
+  background-image: url("/images/little-boy.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

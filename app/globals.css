@@ -27,7 +27,7 @@ body {
 
 .bg-container {
   position: relative;
-  background-image: url("/images/little-boy.avif");
+  background-image: url("https://pbs.twimg.com/media/Gp0UuYcXYAAZ4fW?format=jpg&name=4096x4096");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

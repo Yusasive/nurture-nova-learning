@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import operateImage from "@/public/images/side-view.avif";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -88,10 +87,12 @@ const HowWeOperate = () => {
         variants={imageVariants}
       >
         <Image
-          src={operateImage}
+          src="https://pbs.twimg.com/media/Gp0WNrNXQAAGo-c?format=jpg&name=4096x4096"
           alt="Online teaching illustration"
           className="w-full max-w-md rounded-md"
           loading="lazy"
+          width={550}
+          height={400}
         />
       </motion.div>
     </motion.section>

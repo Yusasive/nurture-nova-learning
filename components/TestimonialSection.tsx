@@ -9,8 +9,8 @@ const testimonials = [
     role: "Parent",
   },
   {
-    text: `Thanks so much to NurtureNova!, Omotara said she learned so much, and I can also confirm that through the recorded zoom videos. Kudos to your team!`,
-    name: "Mrs Maribeth",
+    text: `Thanks so much to NurtureNova!, Samuel said she learned so much, and I can also confirm that through the recorded zoom videos. Kudos to your team!`,
+    name: "Mrs Benjami B.U",
     role: "Parent",
   },
 ];

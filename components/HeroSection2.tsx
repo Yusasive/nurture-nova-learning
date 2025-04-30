@@ -1,5 +1,4 @@
 import React from "react";
-import BgImage from "@/public/images/our-tutors.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -27,10 +26,12 @@ const HeroSection2: React.FC = () => {
         className="w-full overflow-hidden shadow-md"
       >
         <Image
-          src={BgImage}
+          src="https://pbs.twimg.com/media/Gp0TkWVXgAANCl7?format=jpg&name=4096x4096"
           alt="Online Tutors"
           className="object-cover rounded-[30px] w-full h-full p-4"
           loading="lazy"
+          width={5875}
+          height={4925}
         />
       </motion.div>
     </section>

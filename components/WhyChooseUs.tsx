@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import BannerPng from "@/public/images/happy-little.jpg";
 import { motion } from "framer-motion";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
@@ -72,7 +71,7 @@ const WhyChooseUs: React.FC = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <Image
-              src={BannerPng}
+              src="https://pbs.twimg.com/media/Gp0VUkVWkAAdIp5?format=jpg&name=4096x4096" 
               alt="Learning Platform"
               className="w-[400px] md:max-w-[450px] h-[300px] md:h-[550px] rounded-xl shadow-2xl object-cover drop-shadow"
               width={400}

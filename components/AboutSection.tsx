@@ -3,7 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const teamMembers = [{ src: "/images/about-us.avif", alt: "Team Member 2" }];
+const teamMembers = [
+  {
+    src: "https://pbs.twimg.com/media/Gp0Sns3XsAAjUkR?format=jpg&name=4096x4096",
+    alt: "Team Member 2",
+  },
+];
 
 const imageVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -37,9 +42,9 @@ export default function AboutSection() {
             <Image
               src={member.src}
               alt={member.alt}
-              width={300}
+              width={550}
               height={400}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full px-4"
               loading="lazy"
             />
           </motion.div>

@@ -17,7 +17,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Nurture Nova Learning | Personalized Online Tutoring",
+  title: "NurtureNova Learning | Personalized Online Tutoring",
   description:
     "Expert online tutoring for kids in Math, English, Science, Coding & Tech. Learn at your pace with experienced tutors from Nurture Nova Learning.",
   keywords: [
@@ -59,16 +59,16 @@ export const metadata: Metadata = {
     "Global online tutoring for kids",
   ],
   authors: [
-    { name: "Nurture Nova Learning", url: "https://nurturenovalearning.com" },
+    { name: "NurtureNova Learning", url: "https://nurturenovalearning.com" },
   ],
-  creator: "Nurture Nova Learning",
+  creator: "NurtureNova Learning",
   metadataBase: new URL("https://nurturenovalearning.com"),
   openGraph: {
     title: "NurtureNova Learning - Personalized Online Tutoring",
     description:
-      "Join Nurture Nova for tailored tutoring sessions in academics and tech. Engaging, effective, and built for young learners.",
+      "Join NurtureNova for tailored tutoring sessions in academics and tech. Engaging, effective, and built for young learners.",
     url: "https://nurturenovalearning.com",
-    siteName: "Nurture Nova Learning",
+    siteName: "NurtureNova Learning",
     images: [
       {
         url: "https://nurturenovalearning.com/nurture-nova.png",

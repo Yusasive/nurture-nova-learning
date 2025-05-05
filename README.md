@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  NurtureNova Landing Page
 
-## Getting Started
+A responsive and modern landing page built with **Next.js**, **TypeScript**, and **Tailwind CSS**, featuring the following pages:
 
-First, run the development server:
+-  Homepage
+-  About Page
+-  FAQs Page
+-  Contact Us Page
+
+---
+
+##  Tech Stack
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Nodemailer** – for handling contact form submissions via email
+
+---
+
+##  Project Structure
+
+```
+/
+├── app/
+│   ├── page.tsx              # Homepage
+│   ├── about/page.tsx        # About page
+│   ├── faqs/page.tsx         # FAQs page
+│   ├── contact/page.tsx      # Contact Us page
+│   └── api/contact/route.ts  # API Route to handle email
+│
+├── components/               # Reusable components (Navbar, Footer, etc.)
+├── public/                   # Static assets
+├── .env                      # Environment variables (email config)
+└── next.config.js            # Next.js configuration
+```
+
+---
+
+##  Contact Form Integration
+
+The contact form uses `Nodemailer` with SMTP to send emails.
+
+### Environment Variables
+
+Create a `.env` file in your root and configure the following:
+
+```env
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-email-app-password
+EMAIL_TO=optional-receiver-email (defaults to EMAIL_USER)
+```
+
+---
+
+##  Bot Protection
+
+Simple anti-spam measure using a **honeypot field** in the form. If filled (by bots), the form will silently fail.
+
+---
+
+##  Run Locally
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/NurtureNova/Landing-Page-V1.git
+cd Landing-Page-V1
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Add your `.env` file**
+
+4. **Run the dev server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to view it in the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Build for Production
 
-## Learn More
+To build and export for static hosting:
 
-To learn more about Next.js, take a look at the following resources:
+1. Update `next.config.js` with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```ts
+const nextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+};
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+export default nextConfig;
+```
 
-## Deploy on Vercel
+2. Then run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Your static site will be in the `out/` directory. You can deploy it on **Hostinger**, **Netlify**, **Vercel**, or any static hosting platform.
+
+---
+
+##  Performance Optimization
+
+- Responsive design using Tailwind's utility classes
+- Optimized images (use `.webp` where possible)
+- Lazy-loaded sections
+- Clean and accessible markup
+
+---
+
+##  License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+##  Author
+
+Initiated by [Yusasive](https://yusufabdullah.netlify.app/)
+

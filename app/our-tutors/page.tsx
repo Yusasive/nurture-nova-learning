@@ -4,94 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Star, Users, BookOpen } from "lucide-react";
-
-interface Tutor {
-  id: string;
-  name: string;
-  position: string;
-  nationality: string;
-  image: string;
-  specialties: string[];
-  rating: number;
-  studentsCount: number;
-  experience: string;
-  shortBio: string;
-}
-
-const tutors: Tutor[] = [
-  {
-    id: "rasheed-adeoti",
-    name: "Rasheed Adeoti",
-    position: "Senior Mathematics & Physics Tutor",
-    nationality: "Nigerian",
-    image: "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700000/tutor1_sample.jpg",
-    specialties: ["Mathematics", "Physics", "11+ Preparation"],
-    rating: 4.9,
-    studentsCount: 150,
-    experience: "5+ years",
-    shortBio: "Passionate educator specializing in making complex mathematical concepts accessible and engaging for students of all levels."
-  },
-  {
-    id: "adebayo-johnson",
-    name: "Adebayo Johnson",
-    position: "English Language & Literature Specialist",
-    nationality: "Nigerian",
-    image: "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700001/tutor2_sample.jpg",
-    specialties: ["English Language", "Literature", "Creative Writing"],
-    rating: 4.8,
-    studentsCount: 120,
-    experience: "4+ years",
-    shortBio: "Dedicated to helping students develop strong communication skills and a love for literature through interactive learning."
-  },
-  {
-    id: "fatima-ibrahim",
-    name: "Fatima Ibrahim",
-    position: "Science & Technology Educator",
-    nationality: "Nigerian",
-    image: "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700002/tutor3_sample.jpg",
-    specialties: ["Chemistry", "Biology", "Environmental Science"],
-    rating: 4.9,
-    studentsCount: 95,
-    experience: "6+ years",
-    shortBio: "Experienced science educator passionate about inspiring the next generation of scientists and innovators."
-  },
-  {
-    id: "samuel-okafor",
-    name: "Samuel Okafor",
-    position: "Coding & Web Development Instructor",
-    nationality: "Nigerian",
-    image: "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700003/tutor4_sample.jpg",
-    specialties: ["Python", "Web Development", "Scratch Programming"],
-    rating: 4.8,
-    studentsCount: 200,
-    experience: "7+ years",
-    shortBio: "Tech enthusiast dedicated to teaching coding skills and preparing students for the digital future."
-  },
-  {
-    id: "aisha-mohammed",
-    name: "Aisha Mohammed",
-    position: "AI & Machine Learning Specialist",
-    nationality: "Nigerian",
-    image: "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700004/tutor5_sample.jpg",
-    specialties: ["Artificial Intelligence", "Machine Learning", "Data Science"],
-    rating: 4.9,
-    studentsCount: 80,
-    experience: "5+ years",
-    shortBio: "AI researcher and educator passionate about making cutting-edge technology accessible to young learners."
-  },
-  {
-    id: "david-williams",
-    name: "David Williams",
-    position: "Creative Design & Graphics Tutor",
-    nationality: "Nigerian",
-    image: "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700005/tutor6_sample.jpg",
-    specialties: ["Graphic Design", "UI/UX Design", "Digital Art"],
-    rating: 4.7,
-    studentsCount: 110,
-    experience: "4+ years",
-    shortBio: "Creative professional helping students develop design thinking and visual communication skills."
-  }
-];
+import { getActiveTutors, calculateNurtureNovaExperience } from "@/data/tutors";
 
 const containerVariants = {
   hidden: {},
@@ -116,6 +29,8 @@ const cardVariants = {
 };
 
 export default function OurTutorsPage() {
+  const tutors = getActiveTutors();
+
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
@@ -155,7 +70,7 @@ export default function OurTutorsPage() {
       >
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: "50+", label: "Expert Tutors", icon: Users },
+            { number: `${tutors.length}+`, label: "Expert Tutors", icon: Users },
             { number: "1000+", label: "Students Taught", icon: BookOpen },
             { number: "4.8", label: "Average Rating", icon: Star },
             { number: "15+", label: "Subjects Covered", icon: MapPin },
@@ -238,7 +153,7 @@ export default function OurTutorsPage() {
                   </p>
 
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3 font-urbanist">
-                    {tutor.shortBio}
+                    {tutor.bio.substring(0, 120)}...
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -265,9 +180,17 @@ export default function OurTutorsPage() {
                       </div>
                       <div className="flex items-center gap-1">
                         <BookOpen className="w-4 h-4" />
-                        <span>{tutor.experience}</span>
-                      </div>
+                        <span>{tutor.totalExperience}</span>
+                      <span>{tutor.totalExperience}</span>
                     </div>
+                  </div>
+
+                  <div className="text-xs text-[#FE2296] font-semibold mb-4">
+                    With NurtureNova: {calculateNurtureNovaExperience(tutor.nurtureNovaStartDate, tutor.isActive)}
+                  </div>
+
+                  <div className="text-xs text-[#FE2296] font-semibold mb-2">
+                    With NurtureNova: {calculateNurtureNovaExperience(tutor.nurtureNovaStartDate, tutor.isActive)}
                   </div>
 
                   <Link href={`/our-tutors/${tutor.id}`}>

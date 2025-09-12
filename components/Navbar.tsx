@@ -34,7 +34,7 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        <div className="hidden md:flex items-center space-x-16 text-[#111111] text-xl font-semibold">
+        <div className="hidden md:flex items-center space-x-16 text-[#111111] text-2xl font-semibold">
           {["Home", "About", "Our Tutors", "FAQs", "Contact"].map((item) => {
             const href = item === "Home" ? "/" : item === "Our Tutors" ? "/our-tutors" : `/${item.toLowerCase()}`;
             const isActive = pathname === href;
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <Link
                   href={href}
                   className={`hover:text-gray-300 ${
-                    isActive ? "text-[#477EFA] underline" : "text-[#111111]"
+                    isActive ? "text-[#FE2296] underline" : "text-[#111111]"
                   }`}
                 >
                   {item}
@@ -82,7 +82,7 @@ export default function Navbar() {
                     href={href}
                     onClick={() => setIsOpen(false)}
                     className={`hover:text-gray-300 ${
-                      isActive ? "text-[#477EFA] underline" : "text-[#111111]"
+                      isActive ? "text-[#FE2296] underline" : "text-[#111111]"
                     }`}
                   >
                     {item}

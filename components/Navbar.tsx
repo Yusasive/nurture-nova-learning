@@ -35,8 +35,8 @@ export default function Navbar() {
         </motion.div>
 
         <div className="hidden md:flex items-center space-x-16 text-[#111111] text-xl font-semibold">
-          {["Home", "About", "FAQs", "Contact"].map((item) => {
-            const href = item === "Home" ? "/" : `/${item.toLowerCase()}`;
+          {["Home", "About", "Our Tutors", "FAQs", "Contact"].map((item) => {
+            const href = item === "Home" ? "/" : item === "Our Tutors" ? "/our-tutors" : `/${item.toLowerCase()}`;
             const isActive = pathname === href;
 
             return (
@@ -72,8 +72,8 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="absolute top-full min-w-5/6 rounded-lg bg-black/20 bg-opacity-80 py-6 flex flex-col items-center space-y-4 text-[#111111] text-xl font-montserrat font-bold"
             >
-              {["Home", "About", "FAQs", "Contact"].map((item) => {
-                const href = item === "Home" ? "/" : `/${item.toLowerCase()}`;
+              {["Home", "About", "Our Tutors", "FAQs", "Contact"].map((item) => {
+                const href = item === "Home" ? "/" : item === "Our Tutors" ? "/our-tutors" : `/${item.toLowerCase()}`;
                 const isActive = pathname === href;
 
                 return (

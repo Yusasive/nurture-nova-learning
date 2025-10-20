@@ -42,24 +42,24 @@ export default function HeroSection() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 pt-2"
+              className="flex flex-col sm:flex-row justify-center items-center lg:justify-start lg:items-center gap-3 pt-2"
             >
-              <Link href="https://wa.me/2347079650962" target="_blank">
+              <Link href="https://wa.me/2347079650962" target="_blank" className="w-full sm:w-auto">
                 <motion.button
                   whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#FE2296" }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="flex items-center justify-center gap-2 bg-[#FE2296] text-white border border-[#FE2296] text-base font-bold px-5 py-2 rounded-full transition duration-300"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#FE2296] text-white border border-[#FE2296] text-base font-bold px-5 py-2 rounded-full transition duration-300"
                 >
                   <MdCalendarToday className="text-lg" />
                   Book a Session
                 </motion.button>
               </Link>
 
-              <Link href="#courses" scroll>
+              <Link href="#courses" scroll className="w-full sm:w-auto">
                 <motion.button
                   whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#FE2296" }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="flex items-center justify-center gap-2 bg-transparent text-white border border-white text-base font-bold px-5 py-2 rounded-full transition duration-300"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-transparent text-white border border-white text-base font-bold px-5 py-2 rounded-full transition duration-300"
                 >
                   <MdArrowDownward className="text-lg" />
                   Explore Courses
@@ -76,14 +76,9 @@ export default function HeroSection() {
               <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-[#477EFA]/30 blur-2xl" />
 
               <div className="relative h-full w-full">
-                <Image
-                  src="/globe.svg"
-                  alt="Interactive learning visual"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain p-6"
-                  priority
-                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="masked-graphic masked-graphic--globe h-[80%] w-[80%] bg-gradient-to-br from-white via-[#FE2296] to-[#477EFA] opacity-95" />
+                </div>
 
                 <motion.div
                   initial={{ y: 0, opacity: 0 }}

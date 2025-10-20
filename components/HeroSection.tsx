@@ -69,15 +69,52 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="hidden md:block">
-            <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 shadow-lg">
-              <Image
-                src="/window.svg"
-                alt="Learning illustration"
-                width={800}
-                height={600}
-                className="w-full h-auto object-contain"
-                priority
-              />
+            <div className="relative overflow-hidden rounded-3xl p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-xl h-[360px] md:h-[420px]">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#FE2296]/20 via-transparent to-[#477EFA]/30 pointer-events-none" />
+
+              <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-[#FE2296]/30 blur-2xl" />
+              <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-[#477EFA]/30 blur-2xl" />
+
+              <div className="relative h-full w-full">
+                <Image
+                  src="/globe.svg"
+                  alt="Interactive learning visual"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain p-6"
+                  priority
+                />
+
+                <motion.div
+                  initial={{ y: 0, opacity: 0 }}
+                  animate={{ y: [0, -8, 0], opacity: 1 }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-6 left-6 bg-white/90 text-[#012958] rounded-2xl shadow-md px-3 py-2 flex items-center gap-2"
+                >
+                  <Image src="/icons/physics.png" alt="STEM" width={24} height={24} />
+                  <span className="text-sm font-montserrat font-semibold">1-on-1 Tutoring</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ y: 0, opacity: 0 }}
+                  animate={{ y: [0, 10, 0], opacity: 1 }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute right-6 top-1/3 bg-white/90 text-[#012958] rounded-2xl shadow-md px-3 py-2 flex items-center gap-2"
+                >
+                  <Image src="/icons/coding.png" alt="Coding" width={24} height={24} />
+                  <span className="text-sm font-montserrat font-semibold">Python & AI</span>
+                </motion.div>
+
+                <motion.div
+                  initial={{ y: 0, opacity: 0 }}
+                  animate={{ y: [0, -6, 0], opacity: 1 }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                  className="absolute left-10 bottom-6 bg-white/90 text-[#012958] rounded-2xl shadow-md px-3 py-2 flex items-center gap-2"
+                >
+                  <Image src="/icons/preparation.png" alt="Exam Prep" width={24} height={24} />
+                  <span className="text-sm font-montserrat font-semibold">11+ Prep</span>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

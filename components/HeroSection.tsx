@@ -69,8 +69,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="hidden md:block">
-            <div className="relative overflow-hidden rounded-3xl p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-xl h-[360px] md:h-[420px]">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#FE2296]/20 via-transparent to-[#477EFA]/30 pointer-events-none" />
+            <div className="relative overflow-hidden rounded-3xl p-4 shadow-xl h-[360px] md:h-[420px]">
 
               <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-[#FE2296]/30 blur-2xl" />
               <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-[#477EFA]/30 blur-2xl" />

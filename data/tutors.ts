@@ -20,79 +20,58 @@ export interface TutorDetail {
   languages: string[];
 }
 
-
 export const tutorsData: TutorDetail[] = [
   {
     id: "rasheed-adeoti",
     name: "Rasheed Adeoti",
-    position: "Senior Mathematics & Physics Tutor",
+    position: "Founder",
     nationality: "Nigerian",
     gender: "Male",
     image: "/images/abdulrasheed.png",
-    specialties: [
-      "Mathematics",
-      "Physics",
-      "11+ Preparation",
-      "GCSE Preparation",
-    ],
-  // rating removed
-  // studentsCount removed
-  // totalExperience removed
-    nurtureNovaStartDate: "2022-03-15",
+    specialties: ["Mathematics"],
+
+    nurtureNovaStartDate: "2025-03-01",
     isActive: true,
-    bio: "Rasheed is a passionate mathematics and physics educator with over 5 years of experience in online tutoring. He has helped hundreds of students achieve their academic goals through personalized learning approaches. His expertise spans from foundational mathematics to advanced physics concepts, making him an ideal tutor for students preparing for 11+ and GCSE examinations.",
+    bio: "Meet Our Founder – Rasheed Adeoti. \n\nRasheed Adeoti, Founder of NurtureNova Learning, has over 7 years’ experience teaching in traditional classrooms and 2 years in the online learning space. \n\n A First-Class Mathematics graduate and data scientist, Rasheed blends academic excellence with innovative technology to help students excel in both core subjects and future-ready skills. \n\n His passion for personalised, engaging learning is at the heart of NurtureNova’s mission — to empower every child to reach their full potential.",
     academicBackground: {
       degree: "Bachelor of Science in Mathematics",
-      institution: "University of Lagos, Nigeria",
-      year: "2018",
+      institution: "University of Ilorin, Nigeria",
+      year: "2024",
       additionalCertifications: [
+        "First class mathematics (BSc)",
         "Certified Online Tutor (COT)",
         "Advanced Mathematics Teaching Certificate",
-        "Physics Education Specialist",
       ],
     },
-    interests: [
-      "Mathematical Problem Solving",
-      "Physics Experiments",
-      "Educational Technology",
-      "Chess",
-      "Reading Scientific Journals",
-      "Mentoring Young Minds",
-    ],
-    // teachingPhilosophy removed
+    interests: ["Teaching", "Reading"],
+
     achievements: [
+      "MTN Foundation Scholar",
       "Successfully helped 95% of students improve their grades by at least one level",
       "Developed innovative teaching methods for online mathematics education",
-      "Recognized as 'Outstanding Tutor of the Year' 2023",
-      "Published research on effective online STEM education",
     ],
-    languages: ["English", "Yoruba", "Hausa"],
-    // availability removed
-    // sessionTypes removed
+    languages: ["English", "Yoruba", "Italian"],
   },
   {
     id: "toyeeb-olanrewaju-ambali",
     name: "Toyeeb Olanrewaju Ambali",
-    position: "English Language & Literature Specialist",
+    position: "Mathematics and Web Development Tutor",
     nationality: "Nigerian",
     gender: "Male",
     image: "/images/toyyib.png",
     specialties: [
-      "English Language",
-      "Literature",
-      "Creative Writing",
-      "Essay Writing",
+      "Mathematics",
+      "Web Development",
+     
     ],
-  // rating removed
-  // studentsCount removed
-  // totalExperience removed
-    nurtureNovaStartDate: "2022-08-20",
+    nurtureNovaStartDate: "2025-03-01",
     isActive: true,
-    bio: "Adebayo is a dedicated English language and literature specialist who brings creativity and passion to every lesson. With a strong background in linguistics and creative writing, he helps students develop excellent communication skills, critical thinking abilities, and a deep appreciation for literature.",
+    bio: "Toyeeb Olanrewaju Ambali is a versatile professional with a background in Electrical and Electronics Engineering and Network Engineering, bringing a few years of practical experience in the field. He has also developed expertise as a Data Entry Specialist, Brand/Graphics Designer, Researcher, and Developer, demonstrating strong analytical, technical, and problem-solving skills. \n\nIn addition to his engineering and technical background, he is passionate about teaching and tutoring, sharing knowledge across diverse areas of technology and education. With a growing interest in Cybersecurity, he continues to expand his skill set in safeguarding digital systems and networks. \n\nBeyond his professional pursuits, Toyeeb Olanrewaju Ambali is an enthusiastic sports lover, embracing discipline, teamwork, and resilience both on and off the field.",
     academicBackground: {
-      degree: "Bachelor of Arts in English Language and Literature",
-      institution: "University of Ibadan, Nigeria",
-      year: "2019",
+      degree:
+        "Bachelor of Engineering in Electrical and Electronics Engineering",
+      institution: "University of Ilorin, Nigeria",
+      year: "2024",
       additionalCertifications: [
         "TESOL Certification",
         "Creative Writing Workshop Certificate",
@@ -107,7 +86,7 @@ export const tutorsData: TutorDetail[] = [
       "Language Learning",
       "Cultural Studies",
     ],
-    // teachingPhilosophy removed
+
     achievements: [
       "Helped students achieve top grades in GCSE English Literature",
       "Mentored young writers in national writing competitions",
@@ -115,202 +94,122 @@ export const tutorsData: TutorDetail[] = [
       "Featured speaker at education conferences",
     ],
     languages: ["English", "Yoruba", "French"],
-    // availability removed
-    // sessionTypes removed
   },
   {
     id: "rukayat-olabisi-lawal",
     name: "Rukayat Olabisi Lawal,",
-    position: "Science & Technology Educator",
+    position: "Tutor and Administrator",
     nationality: "Nigerian",
     gender: "Female",
-    image: "/images/olabisi.png",
-    specialties: [
-      "Chemistry",
-      "Biology",
-      "Environmental Science",
-      "Laboratory Techniques",
-    ],
-  // rating removed
-  // studentsCount removed
-  // totalExperience removed
-    nurtureNovaStartDate: "2021-11-10",
+    image: "/images/olabisi.jpg",
+    specialties: ["English Language", "Sciences"],
+    nurtureNovaStartDate: "2025-03-01",
     isActive: true,
-    bio: "Fatima is an experienced science educator with a passion for inspiring the next generation of scientists and innovators. Her expertise in chemistry and biology, combined with her enthusiasm for environmental science, makes her an exceptional tutor for students interested in STEM fields.",
+    bio: "I am Rukayat Olabisi Lawal, a graduate of the Federal University of Agriculture, Abeokuta (FUNAAB) where I studied Biological Sciences. I am an experienced teacher and tutor. Currently, I tutor learners at NurtureNova in English and Verbal Reasoning . \n\nI am committed to continuous professional growth and dedicated to making a lasting impact in the lives of my learners.",
     academicBackground: {
-      degree: "Bachelor of Science in Chemistry",
-      institution: "Ahmadu Bello University, Nigeria",
-      year: "2017",
+      degree: "Bachelor of Science",
+      institution: "Federal University of Agriculture, Abeokuta, Nigeria",
+      year: "NA",
       additionalCertifications: [
-        "Environmental Science Certificate",
-        "Laboratory Safety Specialist",
-        "STEM Education Methodology",
+        "Bachelor of Science in Plant Biology",
+        "Jobberman Soft Skills Certificate",
+        "Alx professional development skill for digital age",
       ],
     },
-    interests: [
-      "Environmental Conservation",
-      "Laboratory Research",
-      "Science Communication",
-      "Sustainable Technology",
-      "Nature Photography",
-      "Science Outreach Programs",
-    ],
-    // teachingPhilosophy removed
-    achievements: [
-      "Led environmental awareness campaigns in schools",
-      "Developed virtual laboratory experiments for online learning",
-      "Mentored students in science fair competitions",
-      "Published articles on science education",
-    ],
-    languages: ["English", "Hausa", "Arabic"],
-    // availability removed
-    // sessionTypes removed
+    interests: ["Exploring", "Writing"],
+    achievements: ["Bachelor's degree in Plant Biology"],
+    languages: ["English"],
   },
   {
-    id: "lasisi-romoke-adunbarin",
-    name: "Lasisi Romoke Adunbarin",
-    position: "Coding & Web Development Instructor",
+    id: "asima-michael-aquaowo",
+    name: "Asima Michael Aquaowo",
+    position: "English Tutor",
     nationality: "Nigerian",
-    gender: "Male",
-    image:
-      "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700003/tutor4_sample.jpg",
-    specialties: [
-      "Python",
-      "Web Development",
-      "Scratch Programming",
-      "JavaScript",
-    ],
-  // rating removed
-  // studentsCount removed
-  // totalExperience removed
-    nurtureNovaStartDate: "2021-06-01",
+    gender: "Female",
+    image: "images/asima.jpg",
+    specialties: ["English Language", "Biology"],
+
+    nurtureNovaStartDate: "2025-10-13",
     isActive: true,
-    bio: "Samuel is a tech enthusiast and experienced coding instructor who is passionate about preparing students for the digital future. With extensive experience in software development and education, he makes programming accessible and fun for learners of all ages.",
+    bio: "Asima Michael Aquaowo is a passionate and dedicated educator from Nigeria, specialising in English and Biology. She holds a BSc in Medical Laboratory Science and brings two years of teaching experience to her role.\n\nAsima joined NurtureNova Learning in October 2025, where she is committed to creating engaging, student-centred learning experiences that help learners build confidence and achieve academic excellence.\n\nBeyond the classroom, Asima enjoys writing, a passion that enriches her teaching style and inspires her students to express themselves effectively.\n\nShe is fluent in English and believes strongly in the power of education to transform lives.",
     academicBackground: {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Nigeria, Nsukka",
-      year: "2016",
-      additionalCertifications: [
-        "Full Stack Web Development",
-        "Python Programming Specialist",
-        "Youth Coding Instructor Certificate",
-      ],
+      degree: "Bachelor of Science in Medical Laboratory Science",
+      institution: "Niger Delta University, Nigeria",
+      year: "2022",
+      additionalCertifications: ["NA"],
     },
-    interests: [
-      "Software Development",
-      "Game Development",
-      "Artificial Intelligence",
-      "Open Source Projects",
-      "Tech Innovation",
-      "Digital Literacy",
-    ],
-    // teachingPhilosophy removed
-    achievements: [
-      "Trained over 500 students in programming",
-      "Developed coding curriculum for beginners",
-      "Led coding bootcamps and workshops",
-      "Contributed to open-source educational projects",
-    ],
-    languages: ["English", "Igbo", "Python", "JavaScript"],
-    // availability removed
-    // sessionTypes removed
+    interests: ["Writing and Literature"],
+
+    achievements: ["Attaining Bachelor's of science degree"],
+    languages: ["English"],
   },
   {
     id: "murtala-muhammmad-munabau",
     name: "Murtala Muhammad Munabau",
-    position: "AI & Machine Learning Specialist",
+    position: "Graphic Designer",
     nationality: "Nigerian",
-    gender: "Female",
-    image:
-      "https://res.cloudinary.com/ddxssowqb/image/upload/v1746700004/tutor5_sample.jpg",
+    gender: "Male",
+    image: "images/munabau.jpg",
     specialties: [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Data Science",
-      "Python",
+      "Mathematics",
+      "Graphic Design",
+      "UI/UX Design",
+      "Digital Art",
     ],
-  // rating removed
-  // studentsCount removed
-  // totalExperience removed
-    nurtureNovaStartDate: "2023-01-15",
+
+    nurtureNovaStartDate: "2025-03-01",
     isActive: true,
-    bio: "Aisha is an AI researcher and educator who is passionate about making cutting-edge technology accessible to young learners. Her expertise in machine learning and data science, combined with her teaching skills, helps students understand and apply AI concepts effectively.",
+    bio: "A passionate and creative Graphic Designer with over 3 years of experience in creating visual solutions that communicate clearly and leave lasting impressions. \n\nAt NutureNova Learning, He focus on creating solution-driven visual content that aligns with the brand's goal and resonates with its audience.",
     academicBackground: {
-      degree: "Master of Science in Artificial Intelligence",
-      institution: "University of Lagos, Nigeria",
-      year: "2020",
+      degree: "Bachelor of Science in Mathematics",
+      institution: "University of Ilorin, Nigeria",
+      year: "2025",
       additionalCertifications: [
-        "Machine Learning Engineer Certificate",
-        "Data Science Specialization",
-        "AI Ethics and Responsible AI",
+        "Certified Graphic Designer (CGD)",
+     
       ],
     },
-    interests: [
-      "Machine Learning Research",
-      "Data Visualization",
-      "AI Ethics",
-      "Educational Technology",
-      "Women in Tech",
-      "Innovation in Education",
-    ],
-    // teachingPhilosophy removed
-    achievements: [
-      "Published research papers on AI in education",
-      "Developed AI curriculum for high school students",
-      "Mentored students in AI competitions",
-      "Speaker at international AI conferences",
-    ],
-    languages: ["English", "Hausa", "French"],
-    // availability removed
-    // sessionTypes removed
+    interests: ["Designing", "Creative Art"],
+
+    achievements: ["N/A"],
+    languages: ["English", "Yoruba"],
   },
   {
     id: "yusuf-abdullahi-temidayo",
     name: "Yusuf Abdullahi Temidayo",
-    position: "Creative Design & Graphics Tutor",
+    position: "Frontend Developer & Instructor",
     nationality: "Nigerian",
     gender: "Male",
     image: "/images/yusasive.png",
     specialties: [
-      "Graphic Design",
-      "UI/UX Design",
-      "Digital Art",
-      "Adobe Creative Suite",
+      "Software Development",
+      "FullStack Development",
+      "Frontend Development",
+      "Frontend Instructor",
     ],
-  // rating removed
-  // studentsCount removed
-  // totalExperience removed
-    nurtureNovaStartDate: "2022-09-12",
+
+    nurtureNovaStartDate: "2025-03-01",
     isActive: true,
-    bio: "David is a creative professional and design educator who helps students develop design thinking and visual communication skills. With a strong background in graphic design and user experience, he guides students in creating impactful visual solutions.",
+    bio: "Yuusuf Abdullahi Temidayo (Yusasive) is a Full-Stack Engineer and Frontend Developer with expertise in React, React Native,  Next.js, TypeScript, Tailwind CSS, Flutter, REST APIs, NodeJs Django and the MEAN stack. \n\nAt NurtureNova Learning, he serves as both a Frontend Engineer and Instructor, building responsive, performance-driven applications while also guiding teenagers worldwide through structured, hands-on web development lessons. \n\nWith a Mathematics degree from the University of Ilorin and experience training youths through programs like Cypherdevs (with the Federal Ministry of Education & World Bank), he combines technical excellence with a passion for teaching and mentorship",
     academicBackground: {
-      degree: "Bachelor of Fine Arts in Graphic Design",
-      institution: "Yaba College of Technology, Nigeria",
-      year: "2019",
+      degree: "Bachelor of Science in Mathematics",
+      institution: "University of Ilorin, Nigeria",
+      year: "2025",
       additionalCertifications: [
-        "Adobe Certified Expert",
-        "UI/UX Design Specialization",
-        "Digital Marketing Design",
+        "Meta software development certificate",
+        "Freecodecamp Fullstack development dertificate",
+        "MALhub MERN STack development certificate",
       ],
     },
-    interests: [
-      "Visual Storytelling",
-      "Brand Identity Design",
-      "Digital Illustration",
-      "Photography",
-      "Art History",
-      "Design Trends",
-    ],
-    // teachingPhilosophy removed
+    interests: ["Touring", "Exploring New Tecnhologies", "Travelling"],
+
     achievements: [
-      "Designed award-winning brand identities",
-      "Mentored students in design competitions",
-      "Developed comprehensive design curriculum",
-      "Featured in design publications",
+      "Mentored 150+ youths in tech skills",
+      "Won several awards in hackathons and coding competitions",
+      "Gained recognition as innovator of the year, Unilorin 2025",
+      "Gained Online visibility as a Software Developer",
     ],
-    languages: ["English", "Yoruba"],
-    // availability removed
-    // sessionTypes removed
+    languages: ["English", "Yoruba", "Arabic"],
   },
 ];
 

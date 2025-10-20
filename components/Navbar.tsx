@@ -35,8 +35,13 @@ export default function Navbar() {
         </motion.div>
 
         <div className="hidden md:flex items-center space-x-16 text-[#111111] text-2xl font-semibold">
-          {["Home", "About", "Our Tutors", "FAQs", "Contact"].map((item) => {
-            const href = item === "Home" ? "/" : item === "Our Tutors" ? "/our-tutors" : `/${item.toLowerCase()}`;
+          {["Home", "About", "Meet Our Team", "FAQs", "Contact"].map((item) => {
+            const href =
+              item === "Home"
+                ? "/"
+                : item === "Meet Our Team"
+                  ? "/our-tutors"
+                  : `/${item.toLowerCase()}`;
             const isActive = pathname === href;
 
             return (

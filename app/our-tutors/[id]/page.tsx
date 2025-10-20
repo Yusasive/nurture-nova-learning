@@ -66,12 +66,12 @@ export default function TutorDetailPage() {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <div className="relative">
-                <div className="w-full bg-white h-80 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="w-full bg-white h-96 rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={tutor.image}
                     alt={tutor.name}
                     fill
-                    className="object-cover"
+                    className="w-[866px] h-[1080px]"
                   />
                 </div>
               </div>
@@ -157,9 +157,11 @@ export default function TutorDetailPage() {
               <h2 className="text-3xl font-bold text-[#111111] mb-6 font-montserrat">
                 About {tutor.name}
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed font-urbanist">
-                {tutor.bio}
-              </p>
+              <div className="text-gray-700 text-lg leading-relaxed font-urbanist space-y-4">
+                {tutor.bio.split("\n").map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
             </motion.div>
 
             {/* Academic Background */}
